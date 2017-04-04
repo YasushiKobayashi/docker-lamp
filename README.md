@@ -1,0 +1,6 @@
+- base image is centos6
+- setup LAMP
+- php7
+- mysql5.6
+- `docker pull ptpadan1246/lamp`
+- https://hub.docker.com/r/ptpadan1246/lamp/
