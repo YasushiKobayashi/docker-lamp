@@ -14,14 +14,13 @@ RUN yum -y install httpd && \
 
 RUN yum -y install http://repo.mysql.com/mysql-community-release-el6-4.noarch.rpm && \
     yum -y install mysql-community-server && \
-    service mysqld start && \
     chkconfig mysqld on
 
 RUN yum -y --enablerepo=epel install redis && \
     chkconfig redis on
 
 RUN curl -sS https://getcomposer.org/installer | php && \
-    chmod +x composer.phar
+    chmod +x composer.phar && \
     mv composer.phar /usr/local/bin/composer
 
 RUN git clone git://github.com/creationix/nvm.git ~/.nvm && \
