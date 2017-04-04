@@ -17,6 +17,9 @@ RUN yum -y install http://repo.mysql.com/mysql-community-release-el6-4.noarch.rp
     service mysqld start && \
     chkconfig mysqld on
 
+RUN rpm -ivh http://dl.fedoraproject.org/pub/epel/6/x86_64/epel-release-6-8.noarch.rpm && \
+    yum --enablerepo=epel install redis
+
 RUN curl -sS https://getcomposer.org/installer | php && \
     mv composer.phar /var/www/html
 
