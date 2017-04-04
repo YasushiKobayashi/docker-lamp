@@ -7,7 +7,7 @@ RUN yum -y update && \
 RUN yum -y install epel-release && \
     curl -O http://rpms.famillecollet.com/enterprise/remi-release-6.rpm && \
     rpm -Uvh remi-release-6*.rpm && \
-    yum -y install --enablerepo=remi --enablerepo=remi-php70 php php-devel php-mbstring php-pdo php-gd php-mysqlnd php-openssl php-mcrypt
+    yum -y install --enablerepo=remi --enablerepo=remi-php70 php php-devel php-mbstring php-pdo php-gd php-mysqlnd php-openssl php-mcrypt php-pecl-redis phpunit
 
 RUN yum -y install httpd && \
     chkconfig httpd on
