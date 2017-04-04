@@ -21,7 +21,8 @@ RUN yum -y --enablerepo=epel install redis && \
     chkconfig redis on
 
 RUN curl -sS https://getcomposer.org/installer | php && \
-    mv composer.phar /var/www/html
+    chmod +x composer.phar
+    mv composer.phar /usr/local/bin/composer
 
 RUN git clone git://github.com/creationix/nvm.git ~/.nvm && \
     echo 'source ~/.nvm/nvm.sh' >> ~/.bash_profile  && \

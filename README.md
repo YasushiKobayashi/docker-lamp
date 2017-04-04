@@ -1,6 +1,7 @@
 - base image is centos:6
 - setup LAMP
 - php7
+  - composer
 - mysql5.6
 - nodejs
 - redis
