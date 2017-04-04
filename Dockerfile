@@ -17,7 +17,8 @@ RUN yum -y install http://repo.mysql.com/mysql-community-release-el6-4.noarch.rp
     service mysqld start && \
     chkconfig mysqld on
 
-RUN yum -y --enablerepo=epel install redis
+RUN yum -y --enablerepo=epel install redis && \
+    chkconfig redis on
 
 RUN curl -sS https://getcomposer.org/installer | php && \
     mv composer.phar /var/www/html
@@ -28,4 +29,4 @@ RUN git clone git://github.com/creationix/nvm.git ~/.nvm && \
     nvm install v6.7.0  && \
     npm i -g yarn
 
-CMD service httpd start && service mysqld start
+CMD service httpd start && service mysqld start && service redis start
