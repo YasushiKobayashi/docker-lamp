@@ -1,4 +1,4 @@
-FROM centos6
+FROM centos:6
 MAINTAINER Yasushi Kobayashi <ptpadan@gmail.commv>
 
 RUN yum -y update && \

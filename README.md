@@ -1,4 +1,4 @@
-- base image is centos6
+- base image is centos:6
 - setup LAMP
 - php7
 - mysql5.6

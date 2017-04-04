@@ -5,7 +5,7 @@ machine:
 
 dependencies:
   pre:
-    - docker pull centos6
+    - docker pull centos:6
 
 test:
   override:

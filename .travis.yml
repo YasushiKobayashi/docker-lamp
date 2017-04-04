@@ -1,17 +1,15 @@
 sudo: required
-
-
 services:
   - docker
 
 before_script:
   - echo 'Canada/Pacific' | sudo tee /etc/timezone
   - sudo dpkg-reconfigure --frontend noninteractive tzdata
-  - docker pull centos6
+  - docker pull centos:6
 
 script:
   - docker build .
 
 notifications:
   slack:
-    secure: aW9zVteHiEGVSjHP59Zc73Dvu8lNxMwVyqsRxXoTigR5nuzUUndbMyqWmyVzV8FZSvuzBodmv33tO8tI+Heq76eSQHp7uuXHhpA04rKbWZJy9Hce1d99fY22c/fZIHR1LIcyROtag/wwEhMM0rH/F2YfEORY7G8Z5hjlXEg3QWsT1YOOtoOMAtJqcdxKtjy2Cq3HdNPCPK0V6pUvtEJSuRcEMikD/6i+MSQ4+s0oCrn9KQCZEqUS4MfjMI9/tnZk4Q1uO21HpWLaXJUrmzy0iQ+2XzMc3JWTYgEB/N9dFly0JBJ4/X0gMDjzA9pGjVdHGbDXL+YJMYZF5rilDk4pyh4sRkfNEc2bwh3B2kL7+iSbTZq0HaQyXNe2r+PWhZRuMP9nv4cNk5qw++ZTUdAwLEOw7ztjmpr9YdkzSbSuBJJL7LnNsVA63cdLozJnIltzZIhb3sl8YT6mQbFwKs9j4OIY54kHlzYHbf0mapp6D1mCSRmi/4N1h4E2c7rdH36Jsj1e8dmvOs+3HdgrvcvBlTW90401P2GLlDo6zCH6Se36bnzkhyZLn/lcLyUymrqNn2+Sd5QL5/T3JAH85dxwIugGqGIWxD/rB8NXlJQY915Y7KEvsf3tXW+yFBiM17VdxO8OhmLf3NBbVoX3cpuo+D8zcN8fQxRpIsXqtfvCtsc=
+    secure: P0sPDQTbcr79cg4VLDjTLA7Lz+EsESGjrHWK6cLgiPb45UkNRMgT1fEejHxlNjWF1bl/X2vLcjboJJ9BJjUcyKOE/51vzEeB6vEQSswCs3koz1U5p1UydpYyycjgRQbH70nzn8S7c1bZKO/WSEiskXxrY80Uwi2P6jwm1mHgDm/EPLlGIvKHj4D/iz6ctlwMZx+xsbH67hZ2KXND09eMAyUZRx1HowDQXtWvv+4mubj9Q5muO/h3T0zdEQSTW7ddwsGFYs2kiH15H4hQAyY6eibU7DwotGQuH+07iQgW9ruBV0gxoHsQ6VGabNtAxV9LbAzXJzLztTk0WHvE+ulNYe0AzgDmnsmySEOGUkKa7lW7C3sUuqTLjkoZPxqhgBa/KapR1ig7j+ISNJLhWH4FnGf6yLY93R40Qy25+8iMBZmso7o1Ji/E8dH6AHdTYOapERk24SdTjd7ajypQm7kCd73WcaoET2mOH/1zH31/ldoAaUWMmmUm7LJ0gqIXThX75qoomCb+SBvux0AfuMHl5Jt46E6Qkq3sGDTuX0j1B/+TxiicUCPfkb4u8i9BZOCsyJhkgSHZ13tnqlRkG0RiJHSDB/2fgVh+0Ryi0+ztOnsp9FN2PkWfEt2vF20w8ywhtx1S78o1yr8tc4/7JSd29Uu8TS4Lfgn6+1cETDCab4o=
