@@ -2,7 +2,7 @@ FROM centos:6
 MAINTAINER Yasushi Kobayashi <ptpadan@gmail.commv>
 
 RUN yum -y update && \
-    yum -y install git
+    yum -y install git zip unzip
 
 RUN yum -y install epel-release && \
     curl -O http://rpms.famillecollet.com/enterprise/remi-release-6.rpm && \
